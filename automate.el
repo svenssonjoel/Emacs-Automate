@@ -38,8 +38,6 @@
   status)        ;; 'Waiting, 'Running, 'Finished-success, 'Finished-failure
   
   
-
-
 ;; ------------------------------------------------------------
 ;; State
 
@@ -47,8 +45,11 @@
 (defvar automate-machines-idle-list '())
 (defvar automate-machines-busy-list '())
 
-
 (defvar automate-jobs-list '())
+
+(defvar automate-login "automate") ;; username used by automate when loging into remote machine
+                                   ;; Set this in .emacs file?
+
 
 ;; ------------------------------------------------------------
 ;; CODE
@@ -60,7 +61,6 @@
 	  (automate-machine-info-description machine-info)
 	  (automate-machine-info-ip machine-info)
 	  (automate-machine-info-arch machine-info)))
-
 
 ;; ------------------------------------------------------------
 ;; Interface
